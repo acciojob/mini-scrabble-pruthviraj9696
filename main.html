@@ -1,19 +1,26 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="text" id="evaluatedText" />
+    <h3 id="Count">0</h3>
 
-<html>
+    <script>
+      let evaluatedText = document.getElementById("evaluatedText");
+      let Count = document.getElementById("Count");
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+      evaluatedText.addEventListener("input", lettertext);
 
-<body>
-	<input type="text" name="text" id="eva">
-	<h3 id="letterCount"> 0 </h3>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-		
-</script>
-
-</body>
-
+      function lettertext() {
+        let word = evaluatedText.value;
+        let letter = word.length;
+        Count.innerText = letter;
+      }
+    </script>
+  </body>
 </html>
